@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Student;
 use Illuminate\Http\Request;
 
 class StudentController extends Controller
@@ -12,46 +13,41 @@ class StudentController extends Controller
     public function index()
     {
 
-$student = [
-    [
-        'id' => 1,
-        'name' => 'John Smith',
-        'email' => 'john.smith@example.com',
-        'phone_number' => '081234567890',
-        'address' => '123 Main Street, New York',
-    ],
-    [
-        'id' => 2,
-        'name' => 'Emily Johnson',
-        'email' => 'emily.johnson@example.com',
-        'phone_number' => '081234567891',
-        'address' => '45 Park Avenue, Los Angeles',
-    ],
-    [
-        'id' => 3,
-        'name' => 'Michael Brown',
-        'email' => 'michael.brown@example.com',
-        'phone_number' => '081234567892',
-        'address' => '78 Elm Street, Chicago',
-    ],
-    [
-        'id' => 4,
-        'name' => 'Sophia Davis',
-        'email' => 'sophia.davis@example.com',
-        'phone_number' => '081234567893',
-        'address' => '12 Oak Road, Houston',
-    ],
-    [
-        'id' => 5,
-        'name' => 'James Wilson',
-        'email' => 'james.wilson@example.com',
-        'phone_number' => '081234567894',
-        'address' => '90 Pine Avenue, Miami',
-    ],
-];
+        // $student = [
+        //     [
+        //         'name' => 'John Smith',
+        //         'grade' => '11',
+        //         'email' => 'john.smith@example.com',
+        //         'address' => '123 Main Street, New York',
+        //     ],
+        //     [
+        //         'name' => 'Emily Johnson',
+        //         'grade' => '11',
+        //         'email' => 'emily.johnson@example.com',
+        //         'address' => '45 Park Avenue, Los Angeles',
+        //     ],
+        //     [
+        //         'name' => 'Michael Brown',
+        //         'grade' => '11',
+        //         'email' => 'michael.brown@example.com',
+        //         'address' => '78 Elm Street, Chicago',
+        //     ],
+        //     [
+        //         'name' => 'Sophia Davis',
+        //         'grade' => '11',
+        //         'email' => 'sophia.davis@example.com',
+        //         'address' => '12 Oak Road, Houston',
+        //     ],
+        //     [
+        //         'name' => 'James Wilson',
+        //         'grade' => '11',
+        //         'email' => 'james.wilson@example.com',
+        //         'address' => '90 Pine Avenue, Miami',
+        //     ],
+        // ];
 
-
-        return view('student', ['title' => 'Student', 'student' => $student]);
+        $students = Student::all();
+        return view('student', ['title' => 'Student', 'students' => $students]);
     }
 
     /**
