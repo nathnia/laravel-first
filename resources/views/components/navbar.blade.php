@@ -13,6 +13,8 @@
                             <x-nav-link href="/student" :active="request()->is('student')">Student</x-nav-link>
                             <x-nav-link href="/guardian" :active="request()->is('guardian')">Guardian</x-nav-link>
                             <x-nav-link href="/classroom" :active="request()->is('classroom')">Classroom</x-nav-link>
+                            <x-nav-link href="/teacher" :active="request()->is('teacher')">Teacher</x-nav-link>
+                            <x-nav-link href="/subject" :active="request()->is('subject')">Subject</x-nav-link>
                             <!-- Current: "bg-gray-950/50 text-white", Default: "text-gray-300 hover:bg-white/5 hover:text-white" -->
                         </div>
                     </div>
@@ -68,6 +70,8 @@
                 <x-nav-link href="/student" :active="request()->is('student')">Student</x-nav-link>
                 <x-nav-link href="/guardian" :active="request()->is('guardian')">Guardian</x-nav-link>
                 <x-nav-link href="/classroom" :active="request()->is('classroom')">Classroom</x-nav-link>
+                <x-nav-link href="/teacher" :active="request()->is('teacher')">Teacher</x-nav-link>
+                <x-nav-link href="/subject" :active="request()->is('subject')">Subject</x-nav-link>
                 <!-- <a href="/home" aria-current="page" class="block rounded-md bg-gray-950/50 px-3 py-2 text-base font-medium text-white">Dashboard</a>
                 <a href="/profil" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white">Profile</a>
                 <a href="/kontak" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white">Contact</a> -->

@@ -7,6 +7,8 @@ use App\Http\Controllers\KontakController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProfilController;
 use App\Http\Controllers\StudentController;
+use App\Http\Controllers\SubjectController;
+use App\Http\Controllers\TeacherController;
 
 // Route::get('/', function () {
 //     return view('welcome');
@@ -22,4 +24,6 @@ Route::get('/kontak', [KontakController::class, 'kontak']);
 Route::get('/student', [StudentController::class, 'index']);
 Route::get('/guardian', [GuardianController::class, 'index']);
 Route::get('/classroom', [ClassroomController::class, 'index']);
+Route::get('/teacher', [TeacherController::class, 'index']);
+Route::get('/subject', [SubjectController::class, 'index']);
 
